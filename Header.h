@@ -9,6 +9,8 @@ public:
         data.resize(m, std::vector<int>(n, 0));
     }
 
+ Matrix(const Matrix& other) : m(other.m), n(other.n), data(other.data){}
+
     ~Matrix() {}
 
     std::vector<int>& operator[](unsigned int index) {
